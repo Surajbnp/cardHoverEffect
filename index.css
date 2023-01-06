@@ -2,29 +2,45 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
 .card{
-    background-color: teal;
-    width: 200px;
-    height: 200px;
-    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+}
+
+.card:nth-child(1){
+    background-image: url("https://user-images.githubusercontent.com/97525465/211045098-ad49eea6-72c2-4c69-9ee2-f94f7fed1b09.jpg");
+    background-size: cover;
+}
+
+.card:nth-child(2){
+    background-image: url("https://user-images.githubusercontent.com/97525465/211045181-1cd93b42-11f8-4695-b6d3-3940991ace73.png");
+    background-size: cover;
+}
+
+.card:nth-child(3){
+    background-image: url("https://user-images.githubusercontent.com/97525465/211045139-fd6734e5-4f92-48f7-a1ed-767f8603f4c1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .card{
-    transition: 300ms ease-in-out;
+    transition: 400ms ease-in-out;
 }
 
 .card + .card {
-    margin-left: -10%;
+    margin-left: -12%;
 }
 
 .card:hover{
-    transform: rotate(-4deg);
+    transform: rotate(-8deg);
 }
 
 .card:hover ~ .card {
     z-index: 1;
-    translate: 60px;
+    translate: 150px;
 }
